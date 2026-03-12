@@ -3,6 +3,12 @@ policies:
 reports:
 agent_options:
 controls:
+  ipados_updates:
+    deadline: "2026-06-30"
+    minimum_version: "26.2"
+  scripts:
+    - Path: ../lib/windows/configuration-profiles/set-wallpaper.ps1
+  enable_disk_encryption: true
   macos_updates:
     deadline: "2026-04-30"
     minimum_version: "26.0"
@@ -11,6 +17,10 @@ controls:
       - path: ../lib/macos/configuration-profiles/disable-bluetooth-file-sharing.mobileconfig
         labels_include_all:
           - "Department: Engineering"
+      - path: ../lib/ios/configuration-profiles/passcode-settings.json
+        labels_exclude_any:
+        - C-Suite
+
 software:
 settings:
   secrets:
