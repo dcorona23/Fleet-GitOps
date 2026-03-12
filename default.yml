@@ -10,6 +10,10 @@ org_settings:
   server_settings:
     server_url: $FLEET_URL
   org_info:
-    org_name: Fleet
+    org_name: GRUBHUB
   secrets:
     - secret: "$FLEET_GLOBAL_ENROLL_SECRET"
+webhook_settings:
+  activities_webook:
+    enable_activities_webhook: true
+    destination_url: https://webhook.site/9fa455c9-bdc7-4fd0-8f6f-1be89fd0adb0
