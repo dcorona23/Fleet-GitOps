@@ -21,9 +21,12 @@ controls:
           - "Department: Engineering"
       - path: ../lib/ios/configuration-profiles/passcode-settings.json
         labels_exclude_any:
-        - C-Suite
-
+        - C-Suite        
 software:
+  packages:
+    - path: ../lib/macos/software/zoom.yml
+      self_service: true
+      setup_experience: true
 settings:
   secrets:
     - secret: "$FLEET_WORKSTATIONS_ENROLL_SECRET"
