@@ -1,5 +1,6 @@
 name: "💻 Workstations"
 policies:
+  - path: ../lib/macos/policies/dns_resolvers.policies.yml
 reports:
 agent_options:
 controls:
@@ -7,7 +8,8 @@ controls:
     deadline: "2026-06-30"
     minimum_version: "26.2"
   scripts:
-    - Path: ../lib/windows/configuration-profiles/set-wallpaper.ps1
+    - path: ../lib/windows/configuration-profiles/set-wallpaper.ps1
+    - path: ../lib/macos/scripts/set_dns_cloudflare.sh
   enable_disk_encryption: true
   macos_updates:
     deadline: "2026-04-30"
