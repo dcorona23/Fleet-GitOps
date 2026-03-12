@@ -1,6 +1,6 @@
 name: "💻 Workstations"
 policies:
-  - path: ../lib/macos/policies/dns_resolvers.policies.yml
+  - path: ../lib/macos/policies/dns-resolvers.policies.yml
 reports:
 agent_options:
 controls:
